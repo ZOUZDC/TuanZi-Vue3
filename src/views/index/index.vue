@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <router-view></router-view>
+  111111111111111
 </template>
 
 <style scoped>
+
 </style>
