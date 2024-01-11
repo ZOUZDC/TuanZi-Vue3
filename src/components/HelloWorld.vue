@@ -6,6 +6,8 @@ defineProps({
 })
 
 const count = ref(0)
+import { useCounterStore } from '../stores/counter'
+
 </script>
 
 <template>
@@ -17,6 +19,8 @@ const count = ref(0)
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
+
+    count is {{ useCounterStore().doubleCount }}
   </div>
 
   <p>
