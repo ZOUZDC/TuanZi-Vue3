@@ -1,9 +1,16 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-//import Layout from '@/layout'
+/**
+ * 嵌套路由 用于通用布局
+ * https://router.vuejs.org/zh/guide/essentials/nested-routes.html
+ */
+import Layout from '@/common/layout'
 
 /**
- * 修改自ruoyi-ui
+ * 路由教程
+ * https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html
+ *
+ * 路由业务规则参照ruoyi
  *
  * Note: 路由配置项
  *
@@ -27,11 +34,12 @@ import { createWebHistory, createRouter } from 'vue-router'
   }
  */
 
-// 公共路由
+
+// 静态路由
 export const constantRoutes = [
   {
     path: '',
-    //component: Layout,
+    component: Layout,
     redirect: '/index',
     children: [
       {
@@ -39,10 +47,15 @@ export const constantRoutes = [
         component: () => import('@/views/index')
       }
     ]
-  }
+  },
+  {
+    path: '/zhangsan',
+    component: () => import('@/views/index/zhangsan')
+  },
+
 ]
 
-// 动态路由，基于用户权限动态去加载
+// 动态路由,基于用户权限动态去加载
 export const dynamicRoutes = [
 
 ]

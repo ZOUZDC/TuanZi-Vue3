@@ -11,5 +11,12 @@ app.use(createPinia())
 import router from './router'
 app.use(router)
 
+//element plus
+import ElementPlus from 'element-plus'
+app.use(ElementPlus)
+import 'element-plus/dist/index.css'
+
+import './common/style/index.css'
+
 
 app.mount('#app')
