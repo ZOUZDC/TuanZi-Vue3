@@ -29,10 +29,7 @@ import { ref } from 'vue'
 </template>
 
 <style scoped>
-.common-layout{
-  width: 100vw;
-  height: 100vh;
-}
+
 .a{
   background-color: #535bf2;
 }

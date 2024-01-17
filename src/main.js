@@ -16,6 +16,7 @@ import ElementPlus from 'element-plus'
 app.use(ElementPlus)
 import 'element-plus/dist/index.css'
 
+//全局样式
 import './common/style/index.css'
 
 
