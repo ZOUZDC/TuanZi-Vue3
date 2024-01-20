@@ -5,7 +5,6 @@ import {
   Location,
   Setting,
 } from '@element-plus/icons-vue'
-
 import {ref} from 'vue'
 
 const isCollapse = ref(false)
@@ -68,5 +67,10 @@ const handleClose = (key, keyPath) => {
       <span>Navigator Four</span>
     </el-menu-item>
   </el-menu>
+
+  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+    <el-radio-button :label="false">展开</el-radio-button>
+    <el-radio-button :label="true">收起</el-radio-button>
+  </el-radio-group>
 </template>
 

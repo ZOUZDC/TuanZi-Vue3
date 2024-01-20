@@ -6,7 +6,7 @@ import Up1Down1 from './Up1Down1'
 </script>
 
 <template>
-  <div class="common-layout g-100vwh">
+  <div class="common-layout tz-g-100wh">
     <Left1Right2/>
   </div>
 </template>
