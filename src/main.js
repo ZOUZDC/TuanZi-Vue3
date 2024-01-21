@@ -13,7 +13,8 @@ app.use(router)
 
 //element plus
 import ElementPlus from 'element-plus'
-app.use(ElementPlus)
+import locale from "element-plus/es/locale/lang/zh-cn";
+app.use(ElementPlus, { locale });
 import 'element-plus/dist/index.css'
 
 //全局样式

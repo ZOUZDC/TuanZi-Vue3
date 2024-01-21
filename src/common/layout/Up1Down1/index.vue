@@ -24,6 +24,9 @@ import UpMenu from './../components/UpMenu'
 .el-menu--horizontal{
   --el-menu-horizontal-height:50px
 }
+.el-main {
+  --el-main-padding: 10px;
+}
 
 
 </style>
