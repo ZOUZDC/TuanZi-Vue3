@@ -1,10 +1,10 @@
-import { createWebHistory, createRouter } from 'vue-router'
-
+import {createRouter, createWebHistory} from 'vue-router'
 /**
  * 嵌套路由 用于通用布局
  * https://router.vuejs.org/zh/guide/essentials/nested-routes.html
  */
 import Layout from '@/common/layout'
+
 
 /**
  * 路由教程
@@ -37,39 +37,94 @@ import Layout from '@/common/layout'
 
 // 静态路由
 export const constantRoutes = [
-  {
-    path: '',
-    component: Layout,
-    redirect: '/index',
-    children: [
-      {
-        path: '/index',
-        component: () => import('@/views/index')
-      }
-    ]
-  },
-  {
-    path: '/zhangsan',
-    component: () => import('@/views/index/zhangsan')
-  },
+    {
+        name: "首页",
+        path: '/',
+        component: Layout,
+        redirect: '/index',
+        children: [
+            {
+                name: "首页",
+                path: '/index',
+                component: () => import('@/views/index')
+            },
+        ]
+    },
+    {
+        path: '/zhangsan',
+        children: [
+            {
+                path: '/index2',
+                component: () => import('@/views/index')
+            },
+            {
+                path: '/index22',
+                component: () => import('@/views/index')
+            },
+            {
+                path: '/index23',
+                component: () => import('@/views/index')
+            },
+        ]
+    },
+    {
+        path: '/curd',
+        component: Layout,
+        children: [
+            {
+                path: 'list',
+                component: () => import('@/views/curd/index')
+            }
+        ]
+    },
+    {
+        path: '/:pathMatch(.*)*', name: 'NotFound', component: Layout, children: [
+            {
+                path: '',
+                component: () => import('@/views/40X/404')
+            }
+        ]
+    },
 
 ]
 
 // 动态路由,基于用户权限动态去加载
 export const dynamicRoutes = [
-
+    {
+        path: '/zhangsan2',
+        children: [
+            {
+                path: 'index11',
+                component: () => import('@/views/index')
+            },
+            {
+                path: 'index12',
+                component: () => import('@/views/index')
+            },
+            {
+                path: 'index13',
+                component: () => import('@/views/index')
+            },
+        ]
+    },
 ]
 
+export const allRouters = [...constantRoutes, ...dynamicRoutes]
+
+
+export const menuRouters = []
+
+
 const router = createRouter({
-  history: createWebHistory(),
-  routes: constantRoutes,
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
-    }
-  },
+    history: createWebHistory(),
+    routes: constantRoutes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return {top: 0}
+        }
+    },
 });
 
 export default router;

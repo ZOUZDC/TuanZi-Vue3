@@ -4,8 +4,8 @@ import App from './App.vue'
 const app = createApp(App)
 
 //全局状态管理
-import { createPinia } from 'pinia'
-app.use(createPinia())
+import {setupStore} from './stores'
+setupStore(app)
 
 //路由
 import router from './router'

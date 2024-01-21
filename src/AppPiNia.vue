@@ -1,3 +1,4 @@
+<!--
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import { useCounterStore } from './stores/counter'
@@ -20,8 +21,8 @@ const store = useCounterStore()
   <br>
   <router-link to="/about">Go to About</router-link>
 
-  <!-- 路由出口 -->
-  <!-- 路由匹配到的组件将渲染在这里 -->
+  &lt;!&ndash; 路由出口 &ndash;&gt;
+  &lt;!&ndash; 路由匹配到的组件将渲染在这里 &ndash;&gt;
   <router-view></router-view>
 </template>
 
@@ -39,3 +40,4 @@ const store = useCounterStore()
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+-->

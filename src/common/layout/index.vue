@@ -7,7 +7,7 @@ import Up1Down1 from './Up1Down1'
 
 <template>
   <div class="common-layout tz-g-100wh">
-    <Left1Right2/>
+    <Up1Down1/>
   </div>
 </template>
 
