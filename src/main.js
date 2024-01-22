@@ -20,5 +20,8 @@ import 'element-plus/dist/index.css'
 //全局样式
 import './common/style/index.css'
 
+/*公共组件*/
+import  loadCustComp from  './components/index.js'
+loadCustComp(app)
 
 app.mount('#app')
